@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h1 class="display-3">User Registration</h1>
+  <section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+            class="img-fluid" alt="Sample image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+          <form class = "needs-validation" name="form1" novalidate>
+            <div class="form-group">
+                <label for="exampleName1">Name</label>
+                <input class="form-control" name="input1" id="exampleName1" pattern="^[a-zA-z0-9!@#$%^&*()_+\-=\[\]{};':\\|,.<>\/?]{6}[a-zA-z0-9!@#$%^&*()_+\-=\[\]{};':\\|,.<>\/?]*$" placeholder="Enter Name" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" name="input2" id="exampleInputEmail1" pattern="^[a-zA-z0-9]*@[a-zA-z]*[.]{1}(com|in)$" aria-describedby="emailHelp" placeholder="Enter a valid Email Address" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleMobileNumber1">Mobile Number</label>
+                <input class="form-control" name="input3" id="exampleMobileNumber1" pattern="^[0-9]{10}$" placeholder="0123456789" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" name="input4" pattern="^[a-zA-z0-9!@#$%^&*()_+\-=\[\]{};':\\|,.<>\/?]{6}[a-zA-z0-9!@#$%^&*()_+\-=\[\]{};':\\|,.<>\/?]*$" id="exampleInputPassword1" placeholder="Enter Password" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputConfirmPassword1">Confirm Password</label>
+              <input type="password" class="form-control" name="input4" pattern="^[a-zA-z0-9!@#$%^&*()_+\-=\[\]{};':\\|,.<>\/?]{6}[a-zA-z0-9!@#$%^&*()_+\-=\[\]{};':\\|,.<>\/?]*$" id="exampleInputConfirmPassword1" placeholder="Enter Confirm Password" required>
+          </div>
+            <!--div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Remember me</label>
+            </div-->
+            <button type="submit" class="btn btn-primary">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock content %}
